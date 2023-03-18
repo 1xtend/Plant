@@ -354,9 +354,9 @@ body {
   }
 }
 
-// About
+// Plant
 
-.about {
+.plant {
   &__body {
     padding: 65px 0;
     display: grid;
@@ -386,8 +386,8 @@ body {
   }
 }
 
-.shape-first-about,
-.shape-second-about {
+.shape-first-plant,
+.shape-second-plant {
   background-color: var(--color-grey);
 
   img {
@@ -400,7 +400,7 @@ body {
   }
 }
 
-.shape-first-about {
+.shape-first-plant {
   padding: 57px 45px 41px 49px;
 
   @media (max-width: 479.98px) {
@@ -412,7 +412,7 @@ body {
     padding-bottom: 57%;
   }
 }
-.shape-second-about {
+.shape-second-plant {
   padding: 9px 27px 8px 26px;
 
   @media (max-width: 479.98px) {
