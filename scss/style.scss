@@ -28,6 +28,11 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color: var(--color-black-1);
+
+  &.is-fixed {
+    overflow-y: hidden;
+    position: fixed;
+  }
 }
 
 .wrapper {

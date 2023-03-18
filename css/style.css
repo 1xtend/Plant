@@ -108,6 +108,10 @@ body {
   font-weight: 700;
   color: var(--color-black-1);
 }
+body.is-fixed {
+  overflow-y: hidden;
+  position: fixed;
+}
 
 .wrapper {
   min-height: 100%;
