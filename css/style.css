@@ -144,6 +144,30 @@ body.is-fixed {
   box-shadow: 4px 4px 0px #51c815;
 }
 
+.primary-title {
+  font-size: 3.1666666667rem;
+  line-height: 140%;
+  color: var(--color-black-1);
+  font-weight: 800;
+}
+@media (max-width: 767.98px) {
+  .primary-title {
+    font-size: 2.6666666667rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .primary-title {
+    font-size: 2rem;
+  }
+}
+
+.primary-text {
+  font-size: 1rem;
+  line-height: 161%;
+  color: var(--color-black-1);
+  opacity: 0.6;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -296,16 +320,22 @@ body.is-fixed {
   transition: bottom 0.2s ease 0.2s, transform 0.2s ease;
 }
 
+.hero {
+  padding-bottom: 65px;
+}
+@media (max-width: 767.98px) {
+  .hero {
+    padding-bottom: 30px;
+  }
+}
 .hero__body {
   position: relative;
   padding-top: 190px;
-  margin-bottom: 65px;
   display: flex;
 }
 @media (max-width: 767.98px) {
   .hero__body {
     padding-top: 120px;
-    margin-bottom: 30px;
   }
 }
 .hero__shape {
@@ -415,4 +445,76 @@ body.is-fixed {
   line-height: 161%;
   color: var(--color-black-1);
   opacity: 0.7;
+}
+
+.about__body {
+  padding: 65px 0;
+  display: grid;
+  grid-template-columns: minmax(400px, 584px) minmax(300px, 436px);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 30px;
+  justify-content: space-between;
+}
+@media (max-width: 767.98px) {
+  .about__body {
+    padding: 30px 0;
+    grid-template-columns: minmax(290px, 500px);
+    justify-content: center;
+  }
+}
+.about__title {
+  margin-bottom: 60px;
+}
+@media (max-width: 767.98px) {
+  .about__title {
+    margin-bottom: 30px;
+  }
+}
+.about__shape-second {
+  margin-bottom: 40px;
+}
+.about__text {
+  margin-bottom: 30px;
+}
+
+.shape-first-about,
+.shape-second-about {
+  background-color: var(--color-grey);
+}
+.shape-first-about img,
+.shape-second-about img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.shape-first-about {
+  padding: 57px 45px 41px 49px;
+}
+@media (max-width: 479.98px) {
+  .shape-first-about {
+    padding: 37px 25px 21px 29px;
+  }
+}
+.shape-first-about__image {
+  position: relative;
+  padding-bottom: 57%;
+}
+
+.shape-second-about {
+  padding: 9px 27px 8px 26px;
+}
+@media (max-width: 479.98px) {
+  .shape-second-about {
+    padding: 0 17px 0 26px;
+  }
+}
+.shape-second-about__image {
+  position: relative;
+  padding-bottom: 96%;
 }

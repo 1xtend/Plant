@@ -67,6 +67,23 @@ body {
   }
 }
 
+.primary-title {
+  @include textProperties(57px, 80px, var(--color-black-1));
+  font-weight: 800;
+
+  @media (max-width: 767.98px) {
+    font-size: rem(48px);
+  }
+  @media (max-width: 479.98px) {
+    font-size: rem(36px);
+  }
+}
+
+.primary-text {
+  @include textProperties(18px, 29px, var(--color-black-1));
+  opacity: 0.6;
+}
+
 // Header
 
 .header {
@@ -230,16 +247,20 @@ body {
 // Hero
 
 .hero {
+  padding-bottom: 65px;
+
+  @media (max-width: 767.98px) {
+    padding-bottom: 30px;
+  }
+
   &__body {
     position: relative;
     padding-top: 190px;
-    margin-bottom: 65px;
 
     display: flex;
 
     @media (max-width: 767.98px) {
       padding-top: 120px;
-      margin-bottom: 30px;
     }
   }
   &__shape {
@@ -330,5 +351,76 @@ body {
   &__text {
     @include textProperties(18px, 29px, var(--color-black-1));
     opacity: 0.7;
+  }
+}
+
+// About
+
+.about {
+  &__body {
+    padding: 65px 0;
+    display: grid;
+    grid-template-columns: minmax(400px, 584px) minmax(300px, 436px);
+    column-gap: 20px;
+    row-gap: 30px;
+    justify-content: space-between;
+
+    @media (max-width: 767.98px) {
+      padding: 30px 0;
+      grid-template-columns: minmax(290px, 500px);
+      justify-content: center;
+    }
+  }
+  &__title {
+    margin-bottom: 60px;
+
+    @media (max-width: 767.98px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__shape-second {
+    margin-bottom: 40px;
+  }
+  &__text {
+    margin-bottom: 30px;
+  }
+}
+
+.shape-first-about,
+.shape-second-about {
+  background-color: var(--color-grey);
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.shape-first-about {
+  padding: 57px 45px 41px 49px;
+
+  @media (max-width: 479.98px) {
+    padding: 37px 25px 21px 29px;
+  }
+
+  &__image {
+    position: relative;
+    padding-bottom: 57%;
+  }
+}
+.shape-second-about {
+  padding: 9px 27px 8px 26px;
+
+  @media (max-width: 479.98px) {
+    padding: 0 17px 0 26px;
+  }
+
+  &__image {
+    position: relative;
+    padding-bottom: 96%;
   }
 }
