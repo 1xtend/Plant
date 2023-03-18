@@ -3,9 +3,7 @@ $font-size: 18px;
 
 // px to rem
 @function rem($px) {
-  $result: $px / $font-size;
-
-  @return $result + rem;
+  @return ($px / $font-size) + rem;
 }
 
 // px to %

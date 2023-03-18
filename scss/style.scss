@@ -47,13 +47,12 @@ body {
 }
 
 .order-btn {
+  display: inline-block;
   @include textProperties(18px, 23px, #fff);
   background-color: var(--color-black-1);
   padding: 20px 30px;
   box-shadow: 8px 8px 0px #51c815;
-  position: relative;
-  top: 0;
-  left: 0;
+
   transition: background-color 0.2s linear;
 
   &:hover {
@@ -71,6 +70,12 @@ body {
 // Header
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+
   &__body {
     display: flex;
     justify-content: space-between;
@@ -99,7 +104,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(65, 138, 28, 0.4);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(10px);
     z-index: 2;
 
     transform: translateY(-100%);
@@ -155,6 +160,7 @@ body {
   position: relative;
   z-index: 3;
   display: none;
+  margin-right: -15px;
 
   &.is-active &__inner {
     transition-delay: 0.2s;
@@ -218,5 +224,111 @@ body {
       bottom: -10px;
       transition: bottom 0.2s ease 0.2s, transform 0.2s ease;
     }
+  }
+}
+
+// Hero
+
+.hero {
+  &__body {
+    position: relative;
+    padding-top: 190px;
+    margin-bottom: 65px;
+
+    display: flex;
+
+    @media (max-width: 767.98px) {
+      padding-top: 120px;
+      margin-bottom: 30px;
+    }
+  }
+  &__shape {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 51%;
+    background: url('../images/hero/hero-image.png') right 8% top 0 / 660px 810px no-repeat
+      var(--color-grey);
+    z-index: -1;
+
+    @media (max-width: 767.98px) {
+      background: var(--color-grey);
+    }
+
+    @media (max-width: 479.98px) {
+      display: none;
+    }
+  }
+  &__content {
+    max-width: 715px;
+    margin-left: 34%;
+
+    @media (max-width: 767.98px) {
+      margin-left: 0;
+    }
+  }
+  &__title {
+    @include textProperties(60px, 78px, var(--color-black-1));
+    font-weight: 800;
+    margin-bottom: 35px;
+
+    span {
+      @include textProperties(80px, 105px, var(--color-green));
+
+      @media (max-width: 990.98px) {
+        font-size: rem(64px);
+      }
+      @media (max-width: 479.98px) {
+        font-size: rem(42px);
+      }
+    }
+
+    @media (max-width: 990.98px) {
+      font-size: rem(44px);
+    }
+    @media (max-width: 479.98px) {
+      font-size: rem(32px);
+      margin-bottom: 20px;
+    }
+  }
+  &__info {
+    max-width: 528px;
+    margin-left: 26%;
+
+    @media (max-width: 767.98px) {
+      margin-left: 0;
+    }
+  }
+  &__text {
+    @include textProperties(18px, 29px, var(--color-black-1));
+    opacity: 0.6;
+    margin-bottom: 45px;
+  }
+  &__btn {
+    margin-bottom: 75px;
+
+    @media (max-width: 479.98px) {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.result-hero {
+  display: flex;
+  gap: 102px;
+
+  @media (max-width: 479.98px) {
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  &__num {
+    @include textProperties(43px, 60px, var(--color-green));
+    margin-bottom: 10px;
+  }
+  &__text {
+    @include textProperties(18px, 29px, var(--color-black-1));
+    opacity: 0.7;
   }
 }
