@@ -724,3 +724,140 @@ body {
     padding-bottom: 111%;
   }
 }
+
+// Product
+
+.product {
+  &__body {
+    padding: 65px 0;
+    display: grid;
+    grid-template-columns: minmax(300px, 527px) minmax(300px, 528px);
+    gap: 20px;
+    justify-content: space-between;
+
+    @media (max-width: 990.98px) {
+      padding: 30px 0;
+      grid-template-columns: minmax(290px, 500px);
+      justify-content: center;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 990.98px) {
+      &:first-child {
+        flex-direction: column-reverse;
+      }
+
+      &:last-child {
+        grid-area: 1 / 1;
+      }
+    }
+  }
+
+  &__text {
+    @media (max-width: 990.98px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    max-width: 449px;
+    margin-bottom: 40px;
+
+    @media (max-width: 990.98px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__btn {
+    max-width: 153px;
+  }
+}
+
+.card-product {
+  background-color: var(--color-grey);
+
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) minmax(180px, 232px);
+  align-items: center;
+  gap: 42px;
+
+  @media (max-width: 990.98px) {
+    gap: 20px;
+  }
+
+  &_1 {
+    margin-bottom: 20px;
+    padding: 29px 45px 28px 41px;
+
+    @media (max-width: 990.98px) {
+      margin-bottom: 0;
+    }
+  }
+  &_2 {
+    margin-bottom: 40px;
+    padding: 24px 45px 25px 34px;
+    @media (max-width: 990.98px) {
+      margin-bottom: 20px;
+    }
+  }
+  &_3 {
+    padding: 27px 47px 23px 23px;
+    margin-bottom: 38px;
+    @media (max-width: 990.98px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 990.98px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__title {
+    @include textProperties(32px, 51px, var(--color-black-1));
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  &__text {
+    @include textProperties(14px, 22px, var(--color-black-2));
+    font-weight: 400;
+    opacity: 0.6;
+    margin-bottom: 20px;
+  }
+  &__price {
+    @include textProperties(24px, 38px, var(--color-green));
+  }
+}
+
+.shape-first-card-product,
+.shape-second-card-product,
+.shape-third-card-product {
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.shape-first-card-product {
+  &__image {
+    position: relative;
+    padding-bottom: 95%;
+  }
+}
+.shape-second-card-product {
+  &__image {
+    position: relative;
+    padding-bottom: 95%;
+  }
+}
+
+.shape-third-card-product {
+  &__image {
+    position: relative;
+    padding-bottom: 100%;
+  }
+}
