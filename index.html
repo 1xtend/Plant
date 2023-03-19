@@ -23,13 +23,13 @@
             <nav class="header__nab navbar">
               <ul class="navbar__list">
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link">Home</a>
+                  <a href="#hero" class="navbar__link">Home</a>
                 </li>
                 <li class="navbar__item">
                   <a href="#about" class="navbar__link">About</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link">Contact</a>
+                  <a href="#contact" class="navbar__link">Contact</a>
                 </li>
                 <li class="navbar__item navbar__btn">
                   <a href="#" class="order-btn">Order Now</a>
@@ -47,12 +47,10 @@
       </header>
 
       <main class="main">
-        <section class="hero">
+        <section class="hero" id="hero">
           <div class="container">
             <div class="hero__body">
-              <div class="hero__shape">
-                <!-- <img src="./images/hero/hero-image.png" alt="plant" /> -->
-              </div>
+              <div class="hero__shape"></div>
 
               <div class="hero__content">
                 <h1 class="hero__title">
@@ -279,7 +277,65 @@
         </section>
       </main>
 
-      <footer class="footer"></footer>
+      <footer class="footer" id="contact">
+        <div class="container">
+          <div class="footer__body">
+            <div class="footer__col">
+              <a href="#hero">
+                <img src="./images/global/global-logo-big.png" alt="logo" />
+              </a>
+            </div>
+            <div class="footer__col">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <h4 class="footer__title">About us</h4>
+                </li>
+
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Testimonial</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Contact us</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Feature</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <h4 class="footer__title">Policy library</h4>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Sitemap</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">En esparol</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h4 class="footer__title footer__title_socials">Follow us</h4>
+
+              <div class="footer__socials socials-footer">
+                <a href="https://www.instagram.com/" class="socials-footer__link" target="_blank">
+                  <img src="./images/footer/footer-instagram.svg" alt="instagram" />
+                </a>
+                <a href="https://www.facebook.com/" class="socials-footer__link" target="_blank">
+                  <img src="./images/footer/footer-facebook.svg" alt="facebook" />
+                </a>
+                <a href="https://twitter.com/" class="socials-footer__link" target="_blank">
+                  <img src="./images/footer/footer-twitter.svg" alt="twitter" />
+                </a>
+                <a href="https://www.youtube.com/" class="socials-footer__link" target="_blank">
+                  <img src="./images/footer/footer-youtube.svg" alt="youtube" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="./js/script.js"></script>
