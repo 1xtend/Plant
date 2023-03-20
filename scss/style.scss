@@ -784,6 +784,11 @@ body {
 
   @media (max-width: 990.98px) {
     gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 524.98px) {
+    grid-template-columns: 1fr;
   }
 
   &_1 {
@@ -807,10 +812,6 @@ body {
     @media (max-width: 990.98px) {
       margin-bottom: 20px;
     }
-  }
-
-  @media (max-width: 599.98px) {
-    grid-template-columns: 1fr;
   }
 
   &__title {

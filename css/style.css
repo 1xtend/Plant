@@ -873,6 +873,12 @@ body.is-fixed {
 @media (max-width: 990.98px) {
   .card-product {
     gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 524.98px) {
+  .card-product {
+    grid-template-columns: 1fr;
   }
 }
 .card-product_1 {
@@ -900,11 +906,6 @@ body.is-fixed {
 @media (max-width: 990.98px) {
   .card-product_3 {
     margin-bottom: 20px;
-  }
-}
-@media (max-width: 599.98px) {
-  .card-product {
-    grid-template-columns: 1fr;
   }
 }
 .card-product__title {
